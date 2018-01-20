@@ -17,7 +17,7 @@
    <?php require APPROOT. '/views/inc/header.php';?>
    ```
   
-# How to Use  PHPSimplier
+# How to Use  barePHP
 1. Rename RewriteBase in public/.htacccess 
     if the folder that contains this framework files is named goodApp then the RewriteBase will be /goodApp/public 
     if your are putting this in a server without any folder to contain the files then it should just be /public
