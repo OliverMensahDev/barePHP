@@ -2,7 +2,7 @@
     A mirocframework for building web application with PHP. 
 
 # Structure
-    app folder - is where the whole framework files are created 
+    application folder - is where the whole framework files are created 
     public folder - will host all static files like images, css, js, etc.
 
 # Important Constants 
@@ -67,8 +67,8 @@
     <?php 
     class Posts extends Controller{
         public function __construct(){
-         //load model as $this->postModel = $this->model("Name of Model") with postModel as an instance of our //model class
-          $this->postModel = $this->model("Post")
+         //load model as $this->postModel = $this->loadModel("Name of Model") with postModel as an instance of our //model class
+          $this->postModel = $this->loadModel("Post")
         }
         public function index(){
             $post = $this->postModel->getPosts();
@@ -76,7 +76,7 @@
                 "title =>  "Posts",
                 "posts" => $post
             ]
-            $this->view('pages/index', $post);
+            $this->loadView('pages/index', $post);
         }
     }
     ```
