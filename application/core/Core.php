@@ -20,16 +20,26 @@ class Core {
             $this->currentController = ucwords($url[0]);
             unset($url[0]);
        }
+       else{
+           if(ucwords($url[0] )){
+                require_once '../application/404/404.php';
+                exit();
+           }
+       }
        require_once '../application/controllers/'.$this->currentController . '.php';
        $this->currentController = new $this->currentController;
        if(isset($url[1])){
            if(method_exists($this->currentController, $url[1])){
                $this->currentMethod = $url[1];
+           }else{
+               require_once '../application/404/404.php';
+               exit();
            }
            unset($url[1]);
        }
        $this->params = $url? array_values($url): [];
-       call_user_func_array([$this->currentController,$this->currentMethod], $this->params);
+       $data = call_user_func_array([$this->currentController,$this->currentMethod], $this->params);
+       print($data);
     }
     /**
      * @return mixed $url
