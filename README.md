@@ -7,13 +7,13 @@
     public folder - will host all static files like images, css, js, etc.
 
 # Important Constants 
-  URLROOT  : helps to create anchors links, show images, link in CSS or Javascript.
+  URLROOT  : helps to create dyanmic links to pages, images, css, js files.
   ```
     <script src="<?php echo URLROOT;?>/js/main.js"></script>
   ```
 
 
-  APPROOT  : Helps to include other php files in our pages.
+  APPROOT  : Helps to include other php files in our pages.It is used in place of PHP require/include.
   ```
    <?php require APPROOT. '/views/inc/header.php';?>
    ```
