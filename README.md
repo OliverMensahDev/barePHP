@@ -1,7 +1,7 @@
 
 # barePHP
     A mirocframework for building web application with PHP. barePHP focuses on MVC architectural pattern, 
-    you-arent-gonna-need-it [(YAGNI)][https://en.wikipedia.org/wiki/You_aren%27t_gonna_need_it] principle, 
+    you-arent-gonna-need-it [YAGNI](https://en.wikipedia.org/wiki/You_aren%27t_gonna_need_it) principle, 
     design patterns like Registry to provide beginner friendly minimal approach to building PHP web application.
 
 # Structure
