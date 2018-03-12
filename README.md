@@ -1,29 +1,31 @@
 
 # barePHP
-    A mirocframework for building web application with PHP. barePHP focuses on MVC architectural pattern, you-arent-gonna-need-it [(YAGNI)](https://en.wikipedia.org/wiki/You_aren%27t_gonna_need_it) principle, design patterns like Registry to provide beginner friendly minimal approach to building PHP web application.
+    A mirocframework for building web application with PHP. barePHP focuses on MVC architectural pattern, 
+    you-arent-gonna-need-it [(YAGNI)][https://en.wikipedia.org/wiki/You_aren%27t_gonna_need_it] principle, 
+    design patterns like Registry to provide beginner friendly minimal approach to building PHP web application.
 
 # Structure
     application folder - is where the whole framework files are created 
     public folder - will host all static files like images, css, js, etc.
 
 # Important Constants 
-  URLROOT  : helps to create dyanmic links to pages, images, css, js files.
+    URLROOT  : helps to create dyanmic links to pages, images, css, js files.
   ```
     <script src="<?php echo URLROOT;?>/js/main.js"></script>
   ```
 
 
-  APPROOT  : Helps to include other php files in our pages.It is used in place of PHP require/include.
+    APPROOT  : Helps to include other php files in our pages.It is used in place of PHP require/include.
   ```
    <?php require APPROOT. '/views/inc/header.php';?>
    ```
   
 # How to Use  barePHP
-1. Rename RewriteBase in public/.htacccess 
+    1. Rename RewriteBase in public/.htacccess 
     if the folder that contains this framework files is named goodApp then the RewriteBase will be /goodApp/public 
     if your are putting this in a server without any folder to contain the files then it should just be /public
 
-2. Rename Database info in the config/config,php to suit the information about your database
+    2. Rename Database info in the config/config,php to suit the information about your database
     ```
     define("DB_HOST", 'YOUR SERVER HOST');
     define("DB_USER", 'YOUR USERNAME TO DATABASE');
@@ -68,8 +70,8 @@
     <?php 
     class Posts extends Controller{
         public function __construct(){
-         //load model as $this->postModel = $this->loadModel("Name of Model") with postModel as an instance of our //model class
-          $this->postModel = $this->loadModel("Post")
+            //load model as  $this->postModel = $this->loadModel("Name of Model") 
+            $this->postModel = $this->loadModel("Post")
         }
         public function index(){
             $post = $this->postModel->getPosts();
@@ -81,7 +83,7 @@
         }
     }
     ```
-6. Working with Views. 
+    6. Working with Views. 
     With the views, I have a created inc folder that holds all header and footer contents for your pages. You can choose to use it.
 
     Example  showing how to use data from our controller in our view.
