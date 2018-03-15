@@ -8,6 +8,28 @@
     application folder - is where the whole framework files are created 
     public folder - will host all static files like images, css, js, etc.
 
+## application folder sub-structure
+        404 folder: Any incoming URL which are not associated with any controller action are reroutes to this folder to inform the user that the requested page does not exist in this application.
+        
+        Config folder: This folder houses the configuration file. The file has information concerning database connection settings, URLROOT, APPROOT and the name for the project.
+
+        Controllers Folder: The C in the MVC happens in this folder. All controllers associated with an application are created here.
+
+        Core Folder: This contains file called Core.php that loads controllers, format incoming URL’s into MVC friendly URL. Also, it contains BaseController.php file that helps to load views and models. The remaining file in this folder is Database.php that provides an abstract layer for database operations.
+
+        Helpers Folder: This is where other utilities needed by developers to perform specific functions are created and housed.
+
+        Models Folder: The folder will house all files needed to perform and maintain data and business logic.
+
+        Views Folder: This folder serves as the directory where all files needed to be served to the client are housed.
+
+        .htaccess File: The .htaccess file helps to map the incoming URL as a querying string. With the help of .htaccess file in the root directory the domain name appends public to the URL to help get access to the starting file. For instance if the domain name is “http://oliver.com”, it becomes “http://oliver.com/public”. The .htaccess file in this directory then helps to reverse the newly created URL to the old URL.
+
+        bootstrap.php File: This file loads all the files and instantiate the class needed to start the entire project.
+## public folder sub-structure
+This is where most of the framework structure are housed and that is where developers will be using a lot to build their applications. It consists of other folders, .htaccess file and a bootstrap file. These provide utilities encompassing the entire framework, loading the files needed to start the framework;
+
+
 # Important Constants 
     URLROOT  : helps to create dyanmic links to pages, images, css, js files.
   ```
