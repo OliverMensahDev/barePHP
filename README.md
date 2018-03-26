@@ -1,10 +1,10 @@
 
 # Structure
-` application folder ` : is where the whole framework files are created 
-`public folder` : will host all static files like images, css, js, etc.
+` application folder ` : is where the whole framework files are created.
+`public folder` : contains all static files like images, css, js, etc.
 
 ## application folder sub-structure
-`404 folder`: Any incoming URL which are not associated with any controller action are reroutes to this folder to inform the user that the requested page does not exist in this application.
+`404 folder`: Any incoming URL which are not associated with any controller action reroute to this folder to inform the user that the requested page does not exist in this application.
         
 `Config folder`: This folder houses the configuration file. The file has information concerning database connection settings, URLROOT, APPROOT and the name for the project.
 
@@ -56,7 +56,7 @@ if you have a folder to hold the framework files then the base url will be http:
 ```php
     define("SITENAME", "YOUR SITE NAME");
 ```
-###Creating Models
+### Creating Models
 The model class you will create mostly communicate with a data source and  here we are using mysql database.The  class has an property of a database which is instantiated in the models' constructor. This makes it easier to use the methods of the database in our model class.The methods of the database are:
 *   query :  make a query to the database using PDO
 *   bind :  binds value of passed parameters 
@@ -77,7 +77,7 @@ Example.
         }
     }
 ```
-###Creating  Controllers 
+### Creating  Controllers 
 Controller brings together a model and and a view. The controller extends to a base controller called Controler which makes it asier to use its methods to work with views and models.
 ```php
     <?php 
