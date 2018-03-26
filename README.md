@@ -1,6 +1,7 @@
 
 # Structure
 `application folder` : is where the whole framework files are created.
+
 `public folder` : contains all static files like images, css, js, etc.
 
 ## application folder sub-structure
