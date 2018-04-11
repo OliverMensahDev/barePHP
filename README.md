@@ -74,8 +74,8 @@ Example.
 ```php
     class Post{
         private $db;
-        public function __construct(){
-            $this-> db = new Database;
+        public function __construct(Database $database){
+            $this->db = $database;
         }
 
         public function getPosts(){
