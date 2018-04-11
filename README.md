@@ -48,15 +48,21 @@ if the folder that contains this framework files is named goodApp then the Rewri
     define("DB_PASS", 'YOUR PASSWORD TO DATABASE');
     define("DB_NAME", 'YOUR DATABASE NAME');
 ```
-### Rename URLROOT and SITE NAME
+### Rename URLROOT 
 ```php
     define("URLROOT", "YOUR BASE URL");
 ```
 if you have a folder to hold the framework files then the base url will be http://hostname/folder such as  http://localhost/goodApp. if you are just hosting on your domain without creating any folder to hold the files then http://domainName
-### Giving a name to your web application 
+### Rename SITE NAME 
 ```php
     define("SITENAME", "YOUR SITE NAME");
 ```
+### Default Controller
+```php
+    define("DEFAULTCONTROLLER", "Pages");
+```
+You can rename the default controller to any controller you want but make sure rename that controller file name(Pages) to the newly used name. 
+
 ### Creating Models
 The model class you will create mostly communicate with a data source and  here we are using mysql database.The  class has an property of a database which is instantiated in the models' constructor. This makes it easier to use the methods of the database in our model class.The methods of the database are:
 *   query :  make a query to the database using PDO
