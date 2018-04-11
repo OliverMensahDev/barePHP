@@ -10,3 +10,5 @@ define("APPROOT", dirname(dirname(__FILE__)));
 define("URLROOT", "YOUR BASE URL");
 //site name 
 define("SITENAME", "YOUR SITE NAME");
+//Base Controller 
+define("DEFAULTCONTROLLER", "Pages");

@@ -4,7 +4,7 @@
  * @link https://github.com/OMENSAH/barePHP
  * Controller Class
  */
-  class Welcome extends BaseController{
+  class Pages extends BaseController{
     public function __construct(){
       
     }

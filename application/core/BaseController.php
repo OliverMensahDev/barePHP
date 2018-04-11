@@ -24,6 +24,7 @@ class BaseController {
      */
     public function loadModel($model){
         require_once('../application/models/'. $model . '.php');
-        return new $model();
+        $db = new Database();
+        return new $model($db);
       }
   }

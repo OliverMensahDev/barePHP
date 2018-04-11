@@ -4,13 +4,13 @@
  * @link https://github.com/OMENSAH/barePHP
  * Model Class
  */
-  class Welcome {
+  class Page {
     private $db;
     /**
      * @return void
      */
-    public function __construct(){
-      $this->db = new Database;
+    public function __construct(Database $database){
+      $this->db = $database;
     }
     /**
      * Same Procedure to query db
