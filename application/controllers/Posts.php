@@ -4,10 +4,10 @@ class Posts extends BaseController{
        
     }
     public function index(){
-        echo "index";
+        echo "Me";
     }
     public function add($id){
-        echo "add " . $id ;
+        echo "Me";
     }
     
 }
