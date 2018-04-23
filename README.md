@@ -37,9 +37,15 @@ This is where most of the framework structure are housed and that is where devel
       <?php require APPROOT. '/views/inc/header.php';?>
    ```
   
-# How to Use  barePHP
+# Steps to Use  barePHP
+
+### Download the Repository.
+
+### Rename the project folder (optional)
+
 ### Rename RewriteBase in public/.htacccess 
-if the folder that contains this framework files is named goodApp then the RewriteBase will be /goodApp/public if your are putting this in a server without any folder to contain the files then it should just be /public
+If you renamed the project folder, let's say the project is renamed to "goodApp" then the RewriteBase will be /goodApp/public.
+If your are putting this in a server without any folder to contain the files then it should just be /public
 
 ### Rename Database info in the config/config,php to suit the information about your database
 ```php
