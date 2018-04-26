@@ -91,10 +91,10 @@ Example.
     }
 ```
 ### Creating  Controllers 
-Controller brings together a model and and a view. The controller extends to a base controller called Controler which makes it asier to use its methods to work with views and models.
+Controller brings together a model and and a view. The controller extends to a base controller called BaseController which makes it easier to use its methods to work with views and models.
 ```php
     <?php 
-    class Posts extends Controller{
+    class Posts extends BaseController{
         public function __construct(){
             //load model as  $this->postModel = $this->loadModel("Name of Model") 
             $this->postModel = $this->loadModel("Post")
