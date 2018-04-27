@@ -81,36 +81,37 @@ The model class you will create mostly communicate with a data source and  here 
 *   resultSet : returns an array of objects from the query
 *   single : returns a single object from the query
 *   rowCount: returns the number of rows affected by a query
-Example. 
+Example.
+Here we are retrieving data from users table
 ```php
-    class Post{
+    class User{
         private $db;
         public function __construct(Database $database){
             $this->db = $database;
         }
-
-        public function getPosts(){
-            $this->db->query("SELECT * FROM table");
+        public function getUsers(){
+            $this->db->query("SELECT * FROM users");
             $this->db->resultSet();
         }
     }
 ```
 ### Creating  Controllers 
 Controller brings together a model and and a view. The controller extends to a base controller called BaseController which makes it easier to use its methods to work with views and models.
+Example:
+Here we are using our model to get our data and pass that to our view
 ```php
     <?php 
-    class Posts extends BaseController{
-        public function __construct(){
-            //load model as  $this->postModel = $this->loadModel("Name of Model") 
-            $this->postModel = $this->loadModel("Post")
+       class Users extends BaseController{
+        public function __construct(){ 
+            $this->modelDB = $this->loadModel("User")
         }
         public function index(){
-            $post = $this->postModel->getPosts();
+            $users = $this->postModel->getUsers();
             $data = [
-                "title" =>  "Posts",
-                "posts" => $post
+                "title" =>  "My Users",
+                "users" => $users
             ]
-            $this->loadView('pages/index', $post);
+            $this->loadView('pages/index', $data);
         }
     }
 ```
@@ -119,10 +120,10 @@ With the views, I have a created inc folder that holds all header and footer con
 Example  showing how to use data from our controller in our view.
 ```php
     <?php require APPROOT. '/views/inc/header.php';?>
-    <h1><?php echo $data['title']; ?></h1>
-    <?php foreach($data['posts'] as $post: ?></h1>
-        <li><h1><?php echo $post->DaTabase Table Name; ?></h1></li>
-    <?php endforeach; ?>    
+        <h1><?php echo $data['title']; ?></h1>
+         <?php foreach($data['users'] as $user): ?>
+            <li><h1><?php echo $user->name; ?></h1></li>
+         <?php endforeach; ?>    
     <?php require APPROOT. '/views/inc/footer.php';?>
 ```
     
