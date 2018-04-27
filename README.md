@@ -107,7 +107,7 @@ Controller brings together a model and and a view. The controller extends to a b
         public function index(){
             $post = $this->postModel->getPosts();
             $data = [
-                "title =>  "Posts",
+                "title" =>  "Posts",
                 "posts" => $post
             ]
             $this->loadView('pages/index', $post);
