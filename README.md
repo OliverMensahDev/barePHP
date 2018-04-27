@@ -1,6 +1,9 @@
 
 # Documentation
 
+## Sample Projects built with barePHP Framework
+*    [Live Demo](https://labidy.000webhostapp.com/Blogs/index) and its [Source Code](https://github.com/OMENSAH/nfoundation.com)
+
 ## structure
 `application folder` : is where the whole framework files are created.
 
