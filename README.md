@@ -80,7 +80,8 @@ The model class you will create mostly communicate with a data source and  here 
 *   bind :  binds value of passed parameters 
 *   resultSet : returns an array of objects from the query
 *   single : returns a single object from the query
-*   rowCount: returns the number of rows affected by a query
+*   rowCount: returns the number of rows affected by a query;
+
 Example.
 Here we are retrieving data from users table
 ```php
@@ -98,7 +99,8 @@ Here we are retrieving data from users table
 ### Creating  Controllers 
 Controller brings together a model and and a view. The controller extends to a base controller called BaseController which makes it easier to use its methods to work with views and models.
 Example:
-Here we are using our model to get our data and pass that to our view
+Here we are using our model to get our data and pass that to our view;
+
 ```php
     <?php 
        class Users extends BaseController{
@@ -115,8 +117,10 @@ Here we are using our model to get our data and pass that to our view
         }
     }
 ```
+
 ### Working with Views. 
 With the views, I have a created inc folder that holds all header and footer contents for your pages. You can choose to use it.
+
 Example  showing how to use data from our controller in our view.
 ```php
     <?php require APPROOT. '/views/inc/header.php';?>
